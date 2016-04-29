@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gulp Front
 
 *Шаблон для быстрого старта разработки с [Gulp](http://gulpjs.com/), [Jade](http://jade-lang.com/) и [Stylus](https://learnboost.github.io/stylus/)*
@@ -132,3 +133,7 @@ gulp-front/                             # Корень проекта
 
 ## Лицензия
 [The MIT License (MIT)](LICENSE)
+=======
+# gf3016
+Demo project of my skills
+>>>>>>> 8ea38f7e9ddc8b6f2d3e43581c0b1651f426e690
