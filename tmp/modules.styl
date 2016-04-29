@@ -549,6 +549,118 @@ form-focus-style($color)
 			&:focus
 				form-focus-style($form-input-error-color)
 
+.github-button
+	&
+	&:visited
+		padding 3px 10px
+		display inline-block
+		font-size 0
+		color #fff
+		text-decoration none
+		border 1px solid transparent
+		transition .3s background ease-in-out
+		text-decoration none
+		border-radius 2px
+
+	&:hover
+		text-decoration none
+		color #333
+		background #fff
+		svg
+			fill #333
+
+	&__text
+	&__icon
+		display inline-block
+		vertical-align middle
+
+	&__text
+		font-size 16px
+		font-family notoserif
+
+	&__icon
+		transition all 300ms ease-in-out 0s
+		margin-right 7px
+		svg
+			size 16px
+			fill #fff
+
+.header
+	background #2d3e60
+	padding 115px 0 35px
+	+below($content-width)
+		padding-top 70px
+
+	&__inner
+		max-width $content-width
+		margin 0 auto
+
+	&__top
+		transition padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s
+		padding 1em 0
+		position fixed
+		top 0
+		width 100%
+		z-index 1000
+		background-color #2d3e60
+		box-sizing border-box
+
+
+		+below($content-width)
+			m-padding()
+
+		+below(750px)
+			padding-right 0
+			padding-top 0
+			padding-bottom 0
+
+	&__logo
+	&__menu
+		float left
+
+	&__logo
+		width 190px
+		margin-right 40px
+		+below(980px)
+			float none
+			width auto
+			margin 0
+			text-align center
+			padding-bottom 30px
+		+below(750px)
+			float left
+			width 190px
+			padding-bottom 0
+			padding-top 5px
+
+	&__menu
+		width 600px
+		padding-top 5px
+
+	&__mobile-menu-trigger
+		display none
+		+below(750px)
+			display block
+			float right
+
+	&__github
+		float right
+		width 110px
+		padding-top 5px
+
+	&__bottom
+		padding 70px 0
+		+below($content-width)
+			m-padding()
+
+	&__menu
+	&__github
+		+below(750px)
+			display none
+
+	&_fixed &__top
+		box-shadow 0px 2px 3px rgba(#000, 0.04)
+
 //-//////////////////////////////////////////////////////////
 //- JQuery Form Styler
 //-//////////////////////////////////////////////////////////
@@ -1029,117 +1141,24 @@ input[type='reset']
 			box-shadow none
 			color #888
 
-.github-button
-	&
-	&:visited
-		padding 3px 10px
-		display inline-block
-		font-size 0
-		color #fff
-		text-decoration none
-		border 1px solid transparent
-		transition .3s background ease-in-out
-		text-decoration none
-		border-radius 2px
+.input-group
+	padding-bottom $form-item-padding
+	&__label
+		padding-bottom 8px
+		display block
+		font-size 14px
+		font-weight bold
+		user-select-none()
 
-	&:hover
-		text-decoration none
-		color #333
-		background #fff
-		svg
-			fill #333
+	&__body
+		max-width 800px
 
-	&__text
-	&__icon
-		display inline-block
-		vertical-align middle
+	&__item
+		padding-bottom $form-item-padding
 
-	&__text
-		font-size 16px
-		font-family notoserif
-
-	&__icon
-		transition all 300ms ease-in-out 0s
-		margin-right 7px
-		svg
-			size 16px
-			fill #fff
-
-.header
-	background #2d3e60
-	padding 115px 0 35px
-	+below($content-width)
-		padding-top 70px
-
-	&__inner
-		max-width $content-width
-		margin 0 auto
-
-	&__top
-		transition padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s
-		padding 1em 0
-		position fixed
-		top 0
-		width 100%
-		z-index 1000
-		background-color #2d3e60
-		box-sizing border-box
-
-
-		+below($content-width)
-			m-padding()
-
-		+below(750px)
-			padding-right 0
-			padding-top 0
-			padding-bottom 0
-
-	&__logo
-	&__menu
-		float left
-
-	&__logo
-		width 190px
-		margin-right 40px
-		+below(980px)
-			float none
-			width auto
-			margin 0
-			text-align center
-			padding-bottom 30px
-		+below(750px)
-			float left
-			width 190px
-			padding-bottom 0
-			padding-top 5px
-
-	&__menu
-		width 600px
-		padding-top 5px
-
-	&__mobile-menu-trigger
-		display none
-		+below(750px)
-			display block
-			float right
-
-	&__github
-		float right
-		width 110px
-		padding-top 5px
-
-	&__bottom
-		padding 70px 0
-		+below($content-width)
-			m-padding()
-
-	&__menu
-	&__github
-		+below(750px)
-			display none
-
-	&_fixed &__top
-		box-shadow 0px 2px 3px rgba(#000, 0.04)
+	& .jq-checkbox
+	& .jq-radio
+		margin 0px 10px 0 0
 
 .header-presentation
 	font-family notoserif
@@ -1181,25 +1200,6 @@ input[type='reset']
 	&__download
 		width 230px
 		margin auto
-
-.input-group
-	padding-bottom $form-item-padding
-	&__label
-		padding-bottom 8px
-		display block
-		font-size 14px
-		font-weight bold
-		user-select-none()
-
-	&__body
-		max-width 800px
-
-	&__item
-		padding-bottom $form-item-padding
-
-	& .jq-checkbox
-	& .jq-radio
-		margin 0px 10px 0 0
 
 .logo
 	&
@@ -1799,9 +1799,6 @@ html.remodal-is-locked
 			svgSize($maginifer)
 			visibility visible
 
-.sidebar
-	padding-top 14px
-
 .sidebar-menu
 	background #fff
 	background-color #fff
@@ -1876,6 +1873,12 @@ html.remodal-is-locked
 
 
 
+.stat-counter
+	//
+
+.sidebar
+	padding-top 14px
+
 .social-icons
 	display inline-block
 
@@ -1932,6 +1935,3 @@ html.remodal-is-locked
 	&__item_mr:hover
 		svg
 			fill #168de2
-
-.stat-counter
-	//

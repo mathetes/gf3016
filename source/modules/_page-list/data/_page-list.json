@@ -4,6 +4,10 @@
 			{
 				"title": "Главная",
 				"url": "home"
+			},
+			{
+				"title": "Demo",
+				"url": "demo"
 			}
 		]
 	}

@@ -1020,6 +1020,116 @@ input[type="button"].button_block {
 	box-shadow: 0 0 2px rgba(238,17,17,0.75);
 }
 
+.github-button,
+.github-button:visited {
+	display: inline-block;
+	padding: 3px 10px;
+	-webkit-transition: 0.3s background ease-in-out;
+	-o-transition: 0.3s background ease-in-out;
+	transition: 0.3s background ease-in-out;
+	text-decoration: none;
+	text-decoration: none;
+	color: #ffffff;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	font-size: 0;
+}
+
+.github-button:hover {
+	text-decoration: none;
+	color: #333333;
+	background: #ffffff;
+}
+
+.github-button:hover svg {
+	fill: #333333;
+}
+
+.github-button__text,
+.github-button__icon {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.github-button__text {
+	font-family: "Noto Serif", serif;
+	font-size: 16px;
+}
+
+.github-button__icon {
+	margin-right: 7px;
+	-webkit-transition: all 300ms ease-in-out 0s;
+	-o-transition: all 300ms ease-in-out 0s;
+	transition: all 300ms ease-in-out 0s;
+}
+
+.github-button__icon svg {
+	width: 16px;
+	height: 16px;
+	fill: #ffffff;
+}
+
+.header {
+	padding: 115px 0 35px;
+	background: #2d3e60;
+}
+
+.header__inner {
+	max-width: 1160px;
+	margin: 0 auto;
+}
+
+.header__top {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 1em 0;
+	-webkit-transition: padding 0.5s ease 0s, background 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s;
+	-o-transition: padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s;
+	transition: padding 0.5s ease 0s, background 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s;
+	transition: padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s;
+	transition: padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s;
+	background-color: #2d3e60;
+}
+
+.header__logo,
+.header__menu {
+	float: left;
+}
+
+.header__logo {
+	width: 190px;
+	margin-right: 40px;
+}
+
+.header__menu {
+	width: 600px;
+	padding-top: 5px;
+}
+
+.header__mobile-menu-trigger {
+	display: none;
+}
+
+.header__github {
+	float: right;
+	width: 110px;
+	padding-top: 5px;
+}
+
+.header__bottom {
+	padding: 70px 0;
+}
+
+.header_fixed .header__top {
+	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,0.04);
+	box-shadow: 0px 2px 3px rgba(0,0,0,0.04);
+}
+
 .jq-checkbox {
 	width: 18px;
 	height: 18px;
@@ -1618,114 +1728,34 @@ input[type="reset"] .styler[disabled] {
 	box-shadow: none;
 }
 
-.github-button,
-.github-button:visited {
-	display: inline-block;
-	padding: 3px 10px;
-	-webkit-transition: 0.3s background ease-in-out;
-	-o-transition: 0.3s background ease-in-out;
-	transition: 0.3s background ease-in-out;
-	text-decoration: none;
-	text-decoration: none;
-	color: #ffffff;
-	border: 1px solid transparent;
-	border-radius: 2px;
-	font-size: 0;
+.input-group {
+	padding-bottom: 13px;
 }
 
-.github-button:hover {
-	text-decoration: none;
-	color: #333333;
-	background: #ffffff;
+.input-group__label {
+	display: block;
+	padding-bottom: 8px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: 14px;
+	font-weight: bold;
+
+	-webkit-touch-callout: none;
 }
 
-.github-button:hover svg {
-	fill: #333333;
+.input-group__body {
+	max-width: 800px;
 }
 
-.github-button__text,
-.github-button__icon {
-	display: inline-block;
-	vertical-align: middle;
+.input-group__item {
+	padding-bottom: 13px;
 }
 
-.github-button__text {
-	font-family: "Noto Serif", serif;
-	font-size: 16px;
-}
-
-.github-button__icon {
-	margin-right: 7px;
-	-webkit-transition: all 300ms ease-in-out 0s;
-	-o-transition: all 300ms ease-in-out 0s;
-	transition: all 300ms ease-in-out 0s;
-}
-
-.github-button__icon svg {
-	width: 16px;
-	height: 16px;
-	fill: #ffffff;
-}
-
-.header {
-	padding: 115px 0 35px;
-	background: #2d3e60;
-}
-
-.header__inner {
-	max-width: 1160px;
-	margin: 0 auto;
-}
-
-.header__top {
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	width: 100%;
-	padding: 1em 0;
-	-webkit-transition: padding 0.5s ease 0s, background 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s;
-	-o-transition: padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s;
-	transition: padding 0.5s ease 0s, background 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s;
-	transition: padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s;
-	transition: padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s;
-	background-color: #2d3e60;
-}
-
-.header__logo,
-.header__menu {
-	float: left;
-}
-
-.header__logo {
-	width: 190px;
-	margin-right: 40px;
-}
-
-.header__menu {
-	width: 600px;
-	padding-top: 5px;
-}
-
-.header__mobile-menu-trigger {
-	display: none;
-}
-
-.header__github {
-	float: right;
-	width: 110px;
-	padding-top: 5px;
-}
-
-.header__bottom {
-	padding: 70px 0;
-}
-
-.header_fixed .header__top {
-	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,0.04);
-	box-shadow: 0px 2px 3px rgba(0,0,0,0.04);
+.input-group .jq-checkbox,
+.input-group .jq-radio {
+	margin: 0px 10px 0 0;
 }
 
 .header-presentation {
@@ -1765,36 +1795,6 @@ input[type="reset"] .styler[disabled] {
 .header-presentation__download {
 	width: 230px;
 	margin: auto;
-}
-
-.input-group {
-	padding-bottom: 13px;
-}
-
-.input-group__label {
-	display: block;
-	padding-bottom: 8px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	font-size: 14px;
-	font-weight: bold;
-
-	-webkit-touch-callout: none;
-}
-
-.input-group__body {
-	max-width: 800px;
-}
-
-.input-group__item {
-	padding-bottom: 13px;
-}
-
-.input-group .jq-checkbox,
-.input-group .jq-radio {
-	margin: 0px 10px 0 0;
 }
 
 .logo,
@@ -2518,10 +2518,6 @@ html.remodal-is-locked {
 	vertical-align: middle;
 }
 
-.sidebar {
-	padding-top: 14px;
-}
-
 .sidebar-menu {
 	background: #ffffff;
 	background-color: #ffffff;
@@ -2616,6 +2612,10 @@ html.remodal-is-locked {
 .sidebar-menu__submenu a:hover {
 	text-decoration: underline;
 	color: #0074d9;
+}
+
+.sidebar {
+	padding-top: 14px;
 }
 
 .social-icons {

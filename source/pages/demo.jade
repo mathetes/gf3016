@@ -4,6 +4,8 @@ include ../modules/footer/footer
 include ../modules/browsehappy/browsehappy
 include ../modules/mobile-menu/mobile-menu
 include ../modules/header/header
+include ../modules/sidebar/sidebar
+include ../modules/demo/demo
 
 
 doctype html
@@ -24,12 +26,13 @@ html(class="no-js" lang=config.lang)
 					+header()
 
 				.page__main
-					section
-					h2#grid Структурная сетка
-					.grid.grid_demo
-						.grid__row
-							.grid__col.grid__col_12
-								h2 Ряд на 12 колонок			
+					.layout.layout_sidebar_left
+						.layout__sidebar
+							+sidebar()
+						.layout__content
+							+demo()
+
+
 				.page__buffer
 
 			.page__footer
