@@ -361,20 +361,6 @@ button-size(padding, font-size, line-height)
 	color #000
 	font-size 14px
 
-.footer
-	background #ebebeb
-	border-top 1px solid #dadada
-
-	&__inner
-		padding 30px 0
-		max-width 1160px
-		margin 0 auto
-		+below($content-width)
-			m-padding()
-
-	&__copyright
-		//
-
 .form
 	&__section
 		//
@@ -549,117 +535,19 @@ form-focus-style($color)
 			&:focus
 				form-focus-style($form-input-error-color)
 
-.github-button
-	&
-	&:visited
-		padding 3px 10px
-		display inline-block
-		font-size 0
-		color #fff
-		text-decoration none
-		border 1px solid transparent
-		transition .3s background ease-in-out
-		text-decoration none
-		border-radius 2px
-
-	&:hover
-		text-decoration none
-		color #333
-		background #fff
-		svg
-			fill #333
-
-	&__text
-	&__icon
-		display inline-block
-		vertical-align middle
-
-	&__text
-		font-size 16px
-		font-family notoserif
-
-	&__icon
-		transition all 300ms ease-in-out 0s
-		margin-right 7px
-		svg
-			size 16px
-			fill #fff
-
-.header
-	background #2d3e60
-	padding 115px 0 35px
-	+below($content-width)
-		padding-top 70px
+.footer
+	background #ebebeb
+	border-top 1px solid #dadada
 
 	&__inner
-		max-width $content-width
+		padding 30px 0
+		max-width 1160px
 		margin 0 auto
-
-	&__top
-		transition padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s
-		padding 1em 0
-		position fixed
-		top 0
-		width 100%
-		z-index 1000
-		background-color #2d3e60
-		box-sizing border-box
-
-
 		+below($content-width)
 			m-padding()
 
-		+below(750px)
-			padding-right 0
-			padding-top 0
-			padding-bottom 0
-
-	&__logo
-	&__menu
-		float left
-
-	&__logo
-		width 190px
-		margin-right 40px
-		+below(980px)
-			float none
-			width auto
-			margin 0
-			text-align center
-			padding-bottom 30px
-		+below(750px)
-			float left
-			width 190px
-			padding-bottom 0
-			padding-top 5px
-
-	&__menu
-		width 600px
-		padding-top 5px
-
-	&__mobile-menu-trigger
-		display none
-		+below(750px)
-			display block
-			float right
-
-	&__github
-		float right
-		width 110px
-		padding-top 5px
-
-	&__bottom
-		padding 70px 0
-		+below($content-width)
-			m-padding()
-
-	&__menu
-	&__github
-		+below(750px)
-			display none
-
-	&_fixed &__top
-		box-shadow 0px 2px 3px rgba(#000, 0.04)
+	&__copyright
+		//
 
 //-//////////////////////////////////////////////////////////
 //- JQuery Form Styler
@@ -1141,24 +1029,117 @@ input[type='reset']
 			box-shadow none
 			color #888
 
-.input-group
-	padding-bottom $form-item-padding
-	&__label
-		padding-bottom 8px
-		display block
-		font-size 14px
-		font-weight bold
-		user-select-none()
+.github-button
+	&
+	&:visited
+		padding 3px 10px
+		display inline-block
+		font-size 0
+		color #fff
+		text-decoration none
+		border 1px solid transparent
+		transition .3s background ease-in-out
+		text-decoration none
+		border-radius 2px
 
-	&__body
-		max-width 800px
+	&:hover
+		text-decoration none
+		color #333
+		background #fff
+		svg
+			fill #333
 
-	&__item
-		padding-bottom $form-item-padding
+	&__text
+	&__icon
+		display inline-block
+		vertical-align middle
 
-	& .jq-checkbox
-	& .jq-radio
-		margin 0px 10px 0 0
+	&__text
+		font-size 16px
+		font-family notoserif
+
+	&__icon
+		transition all 300ms ease-in-out 0s
+		margin-right 7px
+		svg
+			size 16px
+			fill #fff
+
+.header
+	background #2d3e60
+	padding 115px 0 35px
+	+below($content-width)
+		padding-top 70px
+
+	&__inner
+		max-width $content-width
+		margin 0 auto
+
+	&__top
+		transition padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s
+		padding 1em 0
+		position fixed
+		top 0
+		width 100%
+		z-index 1000
+		background-color #2d3e60
+		box-sizing border-box
+
+
+		+below($content-width)
+			m-padding()
+
+		+below(750px)
+			padding-right 0
+			padding-top 0
+			padding-bottom 0
+
+	&__logo
+	&__menu
+		float left
+
+	&__logo
+		width 190px
+		margin-right 40px
+		+below(980px)
+			float none
+			width auto
+			margin 0
+			text-align center
+			padding-bottom 30px
+		+below(750px)
+			float left
+			width 190px
+			padding-bottom 0
+			padding-top 5px
+
+	&__menu
+		width 600px
+		padding-top 5px
+
+	&__mobile-menu-trigger
+		display none
+		+below(750px)
+			display block
+			float right
+
+	&__github
+		float right
+		width 110px
+		padding-top 5px
+
+	&__bottom
+		padding 70px 0
+		+below($content-width)
+			m-padding()
+
+	&__menu
+	&__github
+		+below(750px)
+			display none
+
+	&_fixed &__top
+		box-shadow 0px 2px 3px rgba(#000, 0.04)
 
 .header-presentation
 	font-family notoserif
@@ -1201,109 +1182,24 @@ input[type='reset']
 		width 230px
 		margin auto
 
-.logo
-	&
-	&:visited
-		line-height 1
-		line-height normal
-		font-family notoserif
-		font-size 0
-		color #fff
-		font-size 30px
-		text-decoration none
+.input-group
+	padding-bottom $form-item-padding
+	&__label
+		padding-bottom 8px
+		display block
+		font-size 14px
+		font-weight bold
+		user-select-none()
 
-
-	&:hover
-		color #fff - 10%
-
-	&:hover &__icon
-		animation heartbeat 2.5s infinite
-		+below(750px)
-			animation none
-
-	&__name
-		display inline-block
-		vertical-align middle
-
-	&__icon
-		margin-right 4px
-		display inline-block
-		line-height 24px
-		vertical-align middle
-
-		+below(750px)
-			animation heartbeat 2.5s infinite 5s
-
-		svg
-			size 27px
-			fill #e74c3c
-
-
-
-.main-menu
-	ul-reset()
+	&__body
+		max-width 800px
 
 	&__item
-		padding 0 20px 0 0
-		list-style none
-		font-family notoserif
-		font-size 14px
-		float left
-		position relative
+		padding-bottom $form-item-padding
 
-	&__link
-		&
-		&:visited
-			display block
-			text-decoration none
-			color #fff
-			padding 8px 11px 7px
-			transition 125ms all ease-in-out
-
-		&:hover
-			color #fff
-			text-decoration underline
-
-	&__submenu
-		visibility hidden
-		opacity 0
-		transition 125ms all ease-in-out
-		position absolute
-		top 38px
-		left 0
-		background #fff
-		width 250px
-		z-index 1
-		border-radius 0 2px 2px 2px
-		overflow hidden
-
-	&__item:hover &__submenu
-		visibility visible
-		opacity 1
-
-	&__item_dropdown &__link:after
-		content ''
-		display inline-block
-		margin-left 6px
-		triangle( down, 3px, #fff)
-		vertical-align middle
-
-	&__item_dropdown:hover &__link
-		&
-		&:visited
-			border-radius 2px 2px 0 0
-			background #fff
-			color #111
-		&:after
-			triangle( up, 3px, #111)
-			margin-bottom 4px
-
-	.header_fixed &__submenu
-		border 1px solid #ddd
-		border-top none
-		box-shadow 0px 2px 3px rgba(#000, 0.04)
-
-
+	& .jq-checkbox
+	& .jq-radio
+		margin 0px 10px 0 0
 
 .main-menu-submenu
 	ul
@@ -1639,54 +1535,6 @@ html.remodal-is-locked
 	&__total
 		//
 
-.pagination
-	m-cf()
-	text-align center
-	+ul-reset()
-		display inline-block
-		font-size 0
-
-	&__item
-		list-style none
-		padding 0
-		display inline-block
-		vertical-align middle
-		font-size 16px
-		font-weight 300
-
-	&__link
-		&
-		&:visited
-			color #505050
-			padding 8px
-			size 16px
-			display block
-			text-decoration none
-			line-height 1
-
-		&:hover
-			color #9d9d9d
-			text-decoration none
-
-	&__arrow
-		display inline-block
-		line-height 1
-		vertical-align middle
-		text-align center
-		transition 125ms all ease-in-out
-		&:hover
-			background-color #d2d2d2
-			svg
-				fill #fff
-		svg
-			fill #d2d2d2
-			svgSize($chevron-right)
-
-	&__item_active &__link
-		&
-		&:visited
-			color #f05050
-
 .pseudo-dropdown
 	font-size 13px
 	position relative
@@ -1738,21 +1586,156 @@ html.remodal-is-locked
 		background #0074D9
 		color #fff
 
-.scroll-top
-	background #2d3e60
-	border none
-	padding 25px 20px
-	border-radius 50%
-	box-shadow 0 2px 5px 0 rgba(#000, .26)
-	position fixed
-	right 40px
-	bottom 50px
-	outline none
-	svg
-		width 20px
-		height 10px
-		fill #fff
-		display block
+.pagination
+	m-cf()
+	text-align center
+	+ul-reset()
+		display inline-block
+		font-size 0
+
+	&__item
+		list-style none
+		padding 0
+		display inline-block
+		vertical-align middle
+		font-size 16px
+		font-weight 300
+
+	&__link
+		&
+		&:visited
+			color #505050
+			padding 8px
+			size 16px
+			display block
+			text-decoration none
+			line-height 1
+
+		&:hover
+			color #9d9d9d
+			text-decoration none
+
+	&__arrow
+		display inline-block
+		line-height 1
+		vertical-align middle
+		text-align center
+		transition 125ms all ease-in-out
+		&:hover
+			background-color #d2d2d2
+			svg
+				fill #fff
+		svg
+			fill #d2d2d2
+			svgSize($chevron-right)
+
+	&__item_active &__link
+		&
+		&:visited
+			color #f05050
+
+.logo
+	&
+	&:visited
+		line-height 1
+		line-height normal
+		font-family notoserif
+		font-size 0
+		color #fff
+		font-size 30px
+		text-decoration none
+
+
+	&:hover
+		color #fff - 10%
+
+	&:hover &__icon
+		animation heartbeat 2.5s infinite
+		+below(750px)
+			animation none
+
+	&__name
+		display inline-block
+		vertical-align middle
+
+	&__icon
+		margin-right 4px
+		display inline-block
+		line-height 24px
+		vertical-align middle
+
+		+below(750px)
+			animation heartbeat 2.5s infinite 5s
+
+		svg
+			size 27px
+			fill #e74c3c
+
+
+
+.main-menu
+	ul-reset()
+
+	&__item
+		padding 0 20px 0 0
+		list-style none
+		font-family notoserif
+		font-size 14px
+		float left
+		position relative
+
+	&__link
+		&
+		&:visited
+			display block
+			text-decoration none
+			color #fff
+			padding 8px 11px 7px
+			transition 125ms all ease-in-out
+
+		&:hover
+			color #fff
+			text-decoration underline
+
+	&__submenu
+		visibility hidden
+		opacity 0
+		transition 125ms all ease-in-out
+		position absolute
+		top 38px
+		left 0
+		background #fff
+		width 250px
+		z-index 1
+		border-radius 0 2px 2px 2px
+		overflow hidden
+
+	&__item:hover &__submenu
+		visibility visible
+		opacity 1
+
+	&__item_dropdown &__link:after
+		content ''
+		display inline-block
+		margin-left 6px
+		triangle( down, 3px, #fff)
+		vertical-align middle
+
+	&__item_dropdown:hover &__link
+		&
+		&:visited
+			border-radius 2px 2px 0 0
+			background #fff
+			color #111
+		&:after
+			triangle( up, 3px, #111)
+			margin-bottom 4px
+
+	.header_fixed &__submenu
+		border 1px solid #ddd
+		border-top none
+		box-shadow 0px 2px 3px rgba(#000, 0.04)
+
 
 
 .search-widget
@@ -1798,6 +1781,66 @@ html.remodal-is-locked
 			vertical-align middle
 			svgSize($maginifer)
 			visibility visible
+
+.social-icons
+	display inline-block
+
+	&__title
+		color #505050
+		font-size 20px
+		font-weight 500
+		margin 0
+		padding-bottom 14px
+
+	&__list
+		+ul-reset()
+			font-size 0
+
+	&__item
+		list-style none
+		padding 0
+		display inline-block
+		margin-right 20px
+		&:last-child
+			margin-right 0
+		a
+			&
+			&:visited
+			&:hover
+				display block
+				text-decoration none
+
+		svg
+			transition 125ms all ease
+			fill #b0b0b0
+			size 34px
+
+	&__item_vk:hover
+		svg
+			fill #45668e
+
+	&__item_ok:hover
+		svg
+			fill #ed812b
+
+	&__item_tw:hover
+		svg
+			fill #55acee
+
+	&__item_fb:hover
+		svg
+			fill #3b5998
+
+	&__item_gp:hover
+		svg
+			fill #dc4e41
+
+	&__item_mr:hover
+		svg
+			fill #168de2
+
+.sidebar
+	padding-top 14px
 
 .sidebar-menu
 	background #fff
@@ -1873,65 +1916,22 @@ html.remodal-is-locked
 
 
 
+.scroll-top
+	background #2d3e60
+	border none
+	padding 25px 20px
+	border-radius 50%
+	box-shadow 0 2px 5px 0 rgba(#000, .26)
+	position fixed
+	right 40px
+	bottom 50px
+	outline none
+	svg
+		width 20px
+		height 10px
+		fill #fff
+		display block
+
+
 .stat-counter
 	//
-
-.sidebar
-	padding-top 14px
-
-.social-icons
-	display inline-block
-
-	&__title
-		color #505050
-		font-size 20px
-		font-weight 500
-		margin 0
-		padding-bottom 14px
-
-	&__list
-		+ul-reset()
-			font-size 0
-
-	&__item
-		list-style none
-		padding 0
-		display inline-block
-		margin-right 20px
-		&:last-child
-			margin-right 0
-		a
-			&
-			&:visited
-			&:hover
-				display block
-				text-decoration none
-
-		svg
-			transition 125ms all ease
-			fill #b0b0b0
-			size 34px
-
-	&__item_vk:hover
-		svg
-			fill #45668e
-
-	&__item_ok:hover
-		svg
-			fill #ed812b
-
-	&__item_tw:hover
-		svg
-			fill #55acee
-
-	&__item_fb:hover
-		svg
-			fill #3b5998
-
-	&__item_gp:hover
-		svg
-			fill #dc4e41
-
-	&__item_mr:hover
-		svg
-			fill #168de2

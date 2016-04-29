@@ -1,0 +1,54 @@
+include ../modules/head/head
+include ../modules/javascripts/javascripts
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/mobile-menu/mobile-menu
+include ../modules/header/header
+include ../modules/demo/demo
+include ../modules/accordion/accordion
+
+
+doctype html
+html(class="no-js" lang=config.lang)
+
+	head
+		+head(head.home)
+
+	body.page
+		+browsehappy(browsehappy)
+		
+		.page__mobile-menu
+			+mobile-menu(mainMenu.default)
+		
+		.page__content
+			.page__wrapper
+				.page__header#page__header
+					+header()
+
+				.page__main
+					section
+					h2#grid Задачи по разработке проекта
+					.grid.grid_demo
+						.grid__row
+							.grid__col.grid__col_12
+								+accordion()
+									+accordion-item({"title": "Процесс разработки", "open": true})
+										ul
+											li Подключить все интересное из данной сборки
+											li Подобрать интересные решения с Codepen.io
+
+									+accordion-item({"title": "Основные параметры", "open": true})
+										p Цвета
+									
+									+accordion-item({"title": "Главная страница"})
+										h3 Блоки на странице
+
+									+accordion-item({"title": "Accordion item 3"})
+										p Accordion item 2 content			
+				.page__buffer
+
+			.page__footer
+				+footer()
+		
+		//- Scripts
+		+javascripts()
