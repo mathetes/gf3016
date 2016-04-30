@@ -361,180 +361,6 @@ button-size(padding, font-size, line-height)
 	color #000
 	font-size 14px
 
-.form
-	&__section
-		//
-
-	&__item
-		padding-bottom 21px
-
-	&__item-left
-	&__item-right
-		width persentSize(411px, 182px)
-		float left
-
-	&__item-right
-		float right
-
-//- Helpers
-form-focus-style($color)
-	border-color $color
-	box-shadow 0 0 2px rgba($color,.75)
-	// box-shadow inset 0 0 0 1px $color
-	{block}
-
-//- Base styles
-.form-item
-	display block
-	line-height normal
-	m-cf()
-	// padding-bottom 10px
-	&__label
-		display block
-		padding-bottom 4px
-		font-family $form-base-font-family
-		span
-			color $form-input-error-color
-
-	&__input
-		input
-		textarea
-		select
-			box-sizing border-box
-			width 100%
-			font-family $form-base-font-family
-			padding 0 9px
-
-
-		textarea
-			height 100px
-			min-height 100px
-			padding 9px
-			resize vertical
-			line-height normal !important
-
-
-	&__helpers
-		padding-top 4px
-		padding-bottom 4px
-		font-family $form-base-font-family
-
-	&__errors
-		margin 0
-		padding 0
-		li
-			padding 0
-			margin 0
-			list-style none
-			background none
-			font-family $form-base-font-family
-			font-size $form-input-error-font-size
-			color $form-input-error-color
-
-	&__hint
-		font-size $form-input-hint-font-size
-		color $form-input-hint-font-color
-
-	&_type_captcha &__input-image
-		width 137px
-		float left
-		margin-right 10px
-
-	&_type_captcha &__input
-		width 142px
-		float left
-
-	&_type_radio
-	&_type_checkbox
-		padding-left 30px
-		position relative
-
-	&_type_checkbox &__label
-	&_type_radio &__label
-	&_type_checkbox &__input
-	&_type_radio &__input
-		cursor pointer
-		display inline-block
-
-	&_type_radio &__label
-	&_type_checkbox &__label
-		display inline
-		padding 0
-		padding-bottom 0 !important
-		user-select-none()
-
-	&_type_radio &__input
-	&_type_checkbox &__input
-		position absolute
-		left 0
-		top 0
-
-	&_type_multiselect select
-		height auto
-
-	&_type_password input
-		font-family arial
-
-//- Default style
-.form-item_style_default
-	// padding-bottom 17px
-	.form-item
-		&__label
-			color #7b7b7b
-			font-size 16px
-			font-weight 300
-			padding-bottom 9px
-
-		&__input
-			input
-			select
-			textarea
-				background-color #fff
-				border-radius 3px
-				min-height 40px
-				line-height 40px
-				border 1px solid $form-input-border-color
-				color #333
-				// font-size 18px
-				font-size 13px
-				padding 0 18px
-				&:invalid
-					border-color $form-input-error-color
-
-				&:invalid:focus
-					border-color $form-input-error-color
-					form-focus-style($form-input-error-color)
-
-				+placeholder()
-					color #d3d3d3
-					// font-size 12px
-				&:focus
-					outline none
-					form-focus-style($form-input-focus-color)
-
-			textarea
-				padding 8px 18px
-				height 132px
-				min-height 132px
-				line-height $base-line-height
-
-	&.form-item_type_multiselect
-		select
-			padding 0 !important
-			min-height 40px
-			height auto
-
-		option
-			padding 0.5em 1em
-
-	&.form-item_status_error .form-item__input
-		input
-		textarea
-		select
-			border-color $form-input-error-color
-			&:focus
-				form-focus-style($form-input-error-color)
-
 .footer
 	background #ebebeb
 	border-top 1px solid #dadada
@@ -1065,6 +891,180 @@ input[type='reset']
 			size 16px
 			fill #fff
 
+//- Helpers
+form-focus-style($color)
+	border-color $color
+	box-shadow 0 0 2px rgba($color,.75)
+	// box-shadow inset 0 0 0 1px $color
+	{block}
+
+//- Base styles
+.form-item
+	display block
+	line-height normal
+	m-cf()
+	// padding-bottom 10px
+	&__label
+		display block
+		padding-bottom 4px
+		font-family $form-base-font-family
+		span
+			color $form-input-error-color
+
+	&__input
+		input
+		textarea
+		select
+			box-sizing border-box
+			width 100%
+			font-family $form-base-font-family
+			padding 0 9px
+
+
+		textarea
+			height 100px
+			min-height 100px
+			padding 9px
+			resize vertical
+			line-height normal !important
+
+
+	&__helpers
+		padding-top 4px
+		padding-bottom 4px
+		font-family $form-base-font-family
+
+	&__errors
+		margin 0
+		padding 0
+		li
+			padding 0
+			margin 0
+			list-style none
+			background none
+			font-family $form-base-font-family
+			font-size $form-input-error-font-size
+			color $form-input-error-color
+
+	&__hint
+		font-size $form-input-hint-font-size
+		color $form-input-hint-font-color
+
+	&_type_captcha &__input-image
+		width 137px
+		float left
+		margin-right 10px
+
+	&_type_captcha &__input
+		width 142px
+		float left
+
+	&_type_radio
+	&_type_checkbox
+		padding-left 30px
+		position relative
+
+	&_type_checkbox &__label
+	&_type_radio &__label
+	&_type_checkbox &__input
+	&_type_radio &__input
+		cursor pointer
+		display inline-block
+
+	&_type_radio &__label
+	&_type_checkbox &__label
+		display inline
+		padding 0
+		padding-bottom 0 !important
+		user-select-none()
+
+	&_type_radio &__input
+	&_type_checkbox &__input
+		position absolute
+		left 0
+		top 0
+
+	&_type_multiselect select
+		height auto
+
+	&_type_password input
+		font-family arial
+
+//- Default style
+.form-item_style_default
+	// padding-bottom 17px
+	.form-item
+		&__label
+			color #7b7b7b
+			font-size 16px
+			font-weight 300
+			padding-bottom 9px
+
+		&__input
+			input
+			select
+			textarea
+				background-color #fff
+				border-radius 3px
+				min-height 40px
+				line-height 40px
+				border 1px solid $form-input-border-color
+				color #333
+				// font-size 18px
+				font-size 13px
+				padding 0 18px
+				&:invalid
+					border-color $form-input-error-color
+
+				&:invalid:focus
+					border-color $form-input-error-color
+					form-focus-style($form-input-error-color)
+
+				+placeholder()
+					color #d3d3d3
+					// font-size 12px
+				&:focus
+					outline none
+					form-focus-style($form-input-focus-color)
+
+			textarea
+				padding 8px 18px
+				height 132px
+				min-height 132px
+				line-height $base-line-height
+
+	&.form-item_type_multiselect
+		select
+			padding 0 !important
+			min-height 40px
+			height auto
+
+		option
+			padding 0.5em 1em
+
+	&.form-item_status_error .form-item__input
+		input
+		textarea
+		select
+			border-color $form-input-error-color
+			&:focus
+				form-focus-style($form-input-error-color)
+
+.form
+	&__section
+		//
+
+	&__item
+		padding-bottom 21px
+
+	&__item-left
+	&__item-right
+		width persentSize(411px, 182px)
+		float left
+
+	&__item-right
+		float right
+
 .header
 	background #2d3e60
 	padding 115px 0 35px
@@ -1201,39 +1201,109 @@ input[type='reset']
 	& .jq-radio
 		margin 0px 10px 0 0
 
-.main-menu-submenu
-	ul
-		margin 0
-		padding 0
+.logo
+	&
+	&:visited
+		line-height 1
+		line-height normal
+		font-family notoserif
+		font-size 0
+		color #fff
+		font-size 30px
+		text-decoration none
+
+
+	&:hover
+		color #fff - 10%
+
+	&:hover &__icon
+		animation heartbeat 2.5s infinite
+		+below(750px)
+			animation none
+
+	&__name
+		display inline-block
+		vertical-align middle
+
+	&__icon
+		margin-right 4px
+		display inline-block
+		line-height 24px
+		vertical-align middle
+
+		+below(750px)
+			animation heartbeat 2.5s infinite 5s
+
+		svg
+			size 27px
+			fill #e74c3c
+
+
+
+.main-menu
+	ul-reset()
 
 	&__item
+		padding 0 20px 0 0
 		list-style none
-		background none
-		padding 0
-		font-family notosans
-		a
-			&
-			&:visited
-				display block
-				padding 7px 10px
-				color #414141
-				text-decoration none
-				transition 125ms all ease-in-out
+		font-family notoserif
+		font-size 14px
+		float left
+		position relative
 
-			&:hover
-				background #f2f2f5
-				color #414141
+	&__link
+		&
+		&:visited
+			display block
+			text-decoration none
+			color #fff
+			padding 8px 11px 7px
+			transition 125ms all ease-in-out
 
-			&:active
-				color #2d3e60
-				box-shadow inset 0 3px 5px rgba(0,0,0,0.125)
+		&:hover
+			color #fff
+			text-decoration underline
 
-	&__item_active
-		a
-			&
-			&:visited
-				color #fff
-				background #2d3e60 + 20%
+	&__submenu
+		visibility hidden
+		opacity 0
+		transition 125ms all ease-in-out
+		position absolute
+		top 38px
+		left 0
+		background #fff
+		width 250px
+		z-index 1
+		border-radius 0 2px 2px 2px
+		overflow hidden
+
+	&__item:hover &__submenu
+		visibility visible
+		opacity 1
+
+	&__item_dropdown &__link:after
+		content ''
+		display inline-block
+		margin-left 6px
+		triangle( down, 3px, #fff)
+		vertical-align middle
+
+	&__item_dropdown:hover &__link
+		&
+		&:visited
+			border-radius 2px 2px 0 0
+			background #fff
+			color #111
+		&:after
+			triangle( up, 3px, #111)
+			margin-bottom 4px
+
+	.header_fixed &__submenu
+		border 1px solid #ddd
+		border-top none
+		box-shadow 0px 2px 3px rgba(#000, 0.04)
+
+
 
 .mobile-menu
 	padding 20px 0
@@ -1289,15 +1359,126 @@ input[type='reset']
 		&:hover
 			color #2d3e60
 
-.mobile-menu-trigger
-	padding 23px 20px
-	background transparent
-	border none
-	cursor pointer
-	svg
-		svgSize($hamburger)
-		fill #fff
-		display block
+.main-menu-submenu
+	ul
+		margin 0
+		padding 0
+
+	&__item
+		list-style none
+		background none
+		padding 0
+		font-family notosans
+		a
+			&
+			&:visited
+				display block
+				padding 7px 10px
+				color #414141
+				text-decoration none
+				transition 125ms all ease-in-out
+
+			&:hover
+				background #f2f2f5
+				color #414141
+
+			&:active
+				color #2d3e60
+				box-shadow inset 0 3px 5px rgba(0,0,0,0.125)
+
+	&__item_active
+		a
+			&
+			&:visited
+				color #fff
+				background #2d3e60 + 20%
+
+.pager
+	font-size 0
+	display inline-block
+	&__arrow
+		display inline-block
+		padding 8px
+		size 14px
+		fill #d2d2d2
+		line-height 1
+		vertical-align middle
+		text-align center
+		transition 125ms all ease-in-out
+		&:hover
+			background-color #d2d2d2
+			fill #fff
+		svg
+			svgSize($chevron-right)
+
+	&__arrow_left
+		margin-right 5px
+
+	&__arrow_right
+		margin-left 5px
+
+	&__counter
+		color #717171
+		font-size 18px
+		font-weight 400
+		display inline-block
+		vertical-align middle
+		//
+	&__total
+		//
+
+.page-title
+	padding 0 0 8px 0
+	margin 0
+	border-bottom 1px solid #dadada
+
+.pagination
+	m-cf()
+	text-align center
+	+ul-reset()
+		display inline-block
+		font-size 0
+
+	&__item
+		list-style none
+		padding 0
+		display inline-block
+		vertical-align middle
+		font-size 16px
+		font-weight 300
+
+	&__link
+		&
+		&:visited
+			color #505050
+			padding 8px
+			size 16px
+			display block
+			text-decoration none
+			line-height 1
+
+		&:hover
+			color #9d9d9d
+			text-decoration none
+
+	&__arrow
+		display inline-block
+		line-height 1
+		vertical-align middle
+		text-align center
+		transition 125ms all ease-in-out
+		&:hover
+			background-color #d2d2d2
+			svg
+				fill #fff
+		svg
+			fill #d2d2d2
+			svgSize($chevron-right)
+
+	&__item_active &__link
+		&
+		&:visited
+			color #f05050
 
 /*
  *  Remodal - v1.0.6
@@ -1496,44 +1677,15 @@ html.remodal-is-locked
 .lt-ie9 .remodal
 	width 700px
 
-.page-title
-	padding 0 0 8px 0
-	margin 0
-	border-bottom 1px solid #dadada
-
-.pager
-	font-size 0
-	display inline-block
-	&__arrow
-		display inline-block
-		padding 8px
-		size 14px
-		fill #d2d2d2
-		line-height 1
-		vertical-align middle
-		text-align center
-		transition 125ms all ease-in-out
-		&:hover
-			background-color #d2d2d2
-			fill #fff
-		svg
-			svgSize($chevron-right)
-
-	&__arrow_left
-		margin-right 5px
-
-	&__arrow_right
-		margin-left 5px
-
-	&__counter
-		color #717171
-		font-size 18px
-		font-weight 400
-		display inline-block
-		vertical-align middle
-		//
-	&__total
-		//
+.mobile-menu-trigger
+	padding 23px 20px
+	background transparent
+	border none
+	cursor pointer
+	svg
+		svgSize($hamburger)
+		fill #fff
+		display block
 
 .pseudo-dropdown
 	font-size 13px
@@ -1586,201 +1738,22 @@ html.remodal-is-locked
 		background #0074D9
 		color #fff
 
-.pagination
-	m-cf()
-	text-align center
-	+ul-reset()
-		display inline-block
-		font-size 0
+.scroll-top
+	background #2d3e60
+	border none
+	padding 25px 20px
+	border-radius 50%
+	box-shadow 0 2px 5px 0 rgba(#000, .26)
+	position fixed
+	right 40px
+	bottom 50px
+	outline none
+	svg
+		width 20px
+		height 10px
+		fill #fff
+		display block
 
-	&__item
-		list-style none
-		padding 0
-		display inline-block
-		vertical-align middle
-		font-size 16px
-		font-weight 300
-
-	&__link
-		&
-		&:visited
-			color #505050
-			padding 8px
-			size 16px
-			display block
-			text-decoration none
-			line-height 1
-
-		&:hover
-			color #9d9d9d
-			text-decoration none
-
-	&__arrow
-		display inline-block
-		line-height 1
-		vertical-align middle
-		text-align center
-		transition 125ms all ease-in-out
-		&:hover
-			background-color #d2d2d2
-			svg
-				fill #fff
-		svg
-			fill #d2d2d2
-			svgSize($chevron-right)
-
-	&__item_active &__link
-		&
-		&:visited
-			color #f05050
-
-.logo
-	&
-	&:visited
-		line-height 1
-		line-height normal
-		font-family notoserif
-		font-size 0
-		color #fff
-		font-size 30px
-		text-decoration none
-
-
-	&:hover
-		color #fff - 10%
-
-	&:hover &__icon
-		animation heartbeat 2.5s infinite
-		+below(750px)
-			animation none
-
-	&__name
-		display inline-block
-		vertical-align middle
-
-	&__icon
-		margin-right 4px
-		display inline-block
-		line-height 24px
-		vertical-align middle
-
-		+below(750px)
-			animation heartbeat 2.5s infinite 5s
-
-		svg
-			size 27px
-			fill #e74c3c
-
-
-
-.main-menu
-	ul-reset()
-
-	&__item
-		padding 0 20px 0 0
-		list-style none
-		font-family notoserif
-		font-size 14px
-		float left
-		position relative
-
-	&__link
-		&
-		&:visited
-			display block
-			text-decoration none
-			color #fff
-			padding 8px 11px 7px
-			transition 125ms all ease-in-out
-
-		&:hover
-			color #fff
-			text-decoration underline
-
-	&__submenu
-		visibility hidden
-		opacity 0
-		transition 125ms all ease-in-out
-		position absolute
-		top 38px
-		left 0
-		background #fff
-		width 250px
-		z-index 1
-		border-radius 0 2px 2px 2px
-		overflow hidden
-
-	&__item:hover &__submenu
-		visibility visible
-		opacity 1
-
-	&__item_dropdown &__link:after
-		content ''
-		display inline-block
-		margin-left 6px
-		triangle( down, 3px, #fff)
-		vertical-align middle
-
-	&__item_dropdown:hover &__link
-		&
-		&:visited
-			border-radius 2px 2px 0 0
-			background #fff
-			color #111
-		&:after
-			triangle( up, 3px, #111)
-			margin-bottom 4px
-
-	.header_fixed &__submenu
-		border 1px solid #ddd
-		border-top none
-		box-shadow 0px 2px 3px rgba(#000, 0.04)
-
-
-
-.search-widget
-	position relative
-	&__input
-		border none
-		background #717171
-		font-size 16px
-		font-weight 300
-		height 30px
-		line-height 30px
-		padding 0 40px 0 10px
-		box-sizing border-box
-		width 100%
-		color #a3a3a3
-		transition 125ms all ease-in-out
-		+placeholder()
-			color #a3a3a3
-		&:focus
-			background #fff
-			color #505050
-			outline none
-
-	&__submit
-		position absolute
-		right 0
-		top 0
-		size 30px
-		border transparent
-		background none
-		padding 6px
-		line-height 1
-		fill #d4d4d4
-		transition 125ms all ease-in-out
-
-		&:focus
-		&:hover
-			outline none
-			fill #d4d4d4 - 10%
-
-		svg
-			display inline-block
-			vertical-align middle
-			svgSize($maginifer)
-			visibility visible
 
 .social-icons
 	display inline-block
@@ -1838,9 +1811,6 @@ html.remodal-is-locked
 	&__item_mr:hover
 		svg
 			fill #168de2
-
-.sidebar
-	padding-top 14px
 
 .sidebar-menu
 	background #fff
@@ -1916,22 +1886,52 @@ html.remodal-is-locked
 
 
 
-.scroll-top
-	background #2d3e60
-	border none
-	padding 25px 20px
-	border-radius 50%
-	box-shadow 0 2px 5px 0 rgba(#000, .26)
-	position fixed
-	right 40px
-	bottom 50px
-	outline none
-	svg
-		width 20px
-		height 10px
-		fill #fff
-		display block
-
-
 .stat-counter
 	//
+
+.search-widget
+	position relative
+	&__input
+		border none
+		background #717171
+		font-size 16px
+		font-weight 300
+		height 30px
+		line-height 30px
+		padding 0 40px 0 10px
+		box-sizing border-box
+		width 100%
+		color #a3a3a3
+		transition 125ms all ease-in-out
+		+placeholder()
+			color #a3a3a3
+		&:focus
+			background #fff
+			color #505050
+			outline none
+
+	&__submit
+		position absolute
+		right 0
+		top 0
+		size 30px
+		border transparent
+		background none
+		padding 6px
+		line-height 1
+		fill #d4d4d4
+		transition 125ms all ease-in-out
+
+		&:focus
+		&:hover
+			outline none
+			fill #d4d4d4 - 10%
+
+		svg
+			display inline-block
+			vertical-align middle
+			svgSize($maginifer)
+			visibility visible
+
+.sidebar
+	padding-top 14px

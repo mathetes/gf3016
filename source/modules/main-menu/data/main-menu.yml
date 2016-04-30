@@ -96,8 +96,18 @@
         url: "demo.html"
         icon: ""
         submenu: false
+
       -
         title: "ToDo"
         url: "todo.html"
         icon: ""
         submenu: false
+
+      -
+        title: "SPA"
+        url: "spa"
+        icon: "input"
+        submenu:
+          -
+            title: "Backbone"
+            url: "backbone.html"

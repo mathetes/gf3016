@@ -4,6 +4,10 @@
 			{
 				"title": "Главная",
 				"url": "home"
+			},
+			{
+				"title": "Backbone",
+				"url": "backbone"
 			}
 		]
 	},
@@ -16,6 +20,47 @@
 			"scripts": "assets/javascripts",
 			"images": "assets/images",
 			"fonts": "assets/fonts"
+		}
+	},
+	"mainMenu": {
+		"default": [
+			{
+				"title": "Главная",
+				"url": "home.html",
+				"icon": "",
+				"submenu": false
+			},
+			{
+				"title": "Demo",
+				"url": "demo.html",
+				"icon": "",
+				"submenu": false
+			},
+			{
+				"title": "ToDo",
+				"url": "todo.html",
+				"icon": "",
+				"submenu": false
+			},
+			{
+				"title": "SPA",
+				"url": "spa",
+				"icon": "input",
+				"submenu": [
+					{
+						"title": "Backbone",
+						"url": "backbone.html"
+					}
+				]
+			}
+		]
+	},
+	"pagination": {
+		"defaults": {
+			"pages": "6",
+			"active": "4",
+			"total": "10",
+			"arrows": true
 		}
 	},
 	"head": {
@@ -49,36 +94,6 @@
 			"mobile": true,
 			"meta": "default",
 			"og": "default"
-		}
-	},
-	"mainMenu": {
-		"default": [
-			{
-				"title": "Главная",
-				"url": "home.html",
-				"icon": "",
-				"submenu": false
-			},
-			{
-				"title": "Demo",
-				"url": "demo.html",
-				"icon": "",
-				"submenu": false
-			},
-			{
-				"title": "ToDo",
-				"url": "todo.html",
-				"icon": "",
-				"submenu": false
-			}
-		]
-	},
-	"pagination": {
-		"defaults": {
-			"pages": "6",
-			"active": "4",
-			"total": "10",
-			"arrows": true
 		}
 	},
 	"socialIcons": {

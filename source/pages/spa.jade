@@ -1,0 +1,39 @@
+include ../modules/head/head
+include ../modules/javascripts/javascripts
+include ../modules/footer/footer
+include ../modules/browsehappy/browsehappy
+include ../modules/mobile-menu/mobile-menu
+include ../modules/header/header
+
+
+doctype html
+html(class="no-js" lang=config.lang)
+
+	head
+		+head(head.home)
+
+	body.page
+		+browsehappy(browsehappy)
+		
+		.page__mobile-menu
+			+mobile-menu(mainMenu.default)
+		
+		.page__content
+			.page__wrapper
+				.page__header#page__header
+					+header()
+
+				.page__main
+					section
+					h2#grid Структурная сетка
+					.grid.grid_demo
+						.grid__row
+							.grid__col.grid__col_12
+								h2 Одностраничные приложения			
+				.page__buffer
+
+			.page__footer
+				+footer()
+		
+		//- Scripts
+		+javascripts()
